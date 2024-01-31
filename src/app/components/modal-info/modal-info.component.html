@@ -1,0 +1,31 @@
+<div class="total position-fixed z-1 d-flex justify-content-center align-items-center">
+    <div (click)="closeModal()" class="w-100 h-100 glass-modal position-absolute"></div>
+    <div class="modal-Body position-absolute">
+        <button (click)="closeModal()" class="cierre text-white fw-bolder">X</button>
+        <div class="body-modal d-flex">
+            <header class="header-modal size-cont" [style]="backgroundCard">
+            </header>
+            <main class="main-modal size-cont text-white">
+                <h2>{{name}} </h2>
+                <hr>
+                <section class="body-cocktail">
+                    <p>{{instruction}}</p>
+                    <table class="table-ingredientes" *ngIf="this.cocktaildetaile.strIngredient1 !='' " >
+                        <thead>
+                            <tr>
+                                <th>Ingrediente</th>
+                                <th>cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let ingrediente of limitIngredientes; let index= index" >
+                                <td class="py-2" *ngIf="ingrediente != null ">{{ingrediente}}</td>
+                                <td class="py-2" *ngIf="ingrediente != null ">{{limitCant[index]}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+</div>

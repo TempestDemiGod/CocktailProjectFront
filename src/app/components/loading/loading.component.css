@@ -1,0 +1,41 @@
+.bg-loading{
+    background-color: rgb(17 24 39);
+}
+.cocktail-ligth{
+    filter: drop-shadow(0 0 1.85rem crimson);
+}
+.letter-loading{
+    filter: drop-shadow(0 0 1.85rem rgb(248 113 113));
+    color:  rgb(248 113 113);
+}
+.letter-loading-end{
+    color:  rgb(96 165 250);
+    filter: drop-shadow(0 0 1.85rem rgb(191 219 254));
+}
+.container-loading-logo{
+    flex-direction: column-reverse;
+}
+.letter-margin{
+    margin-bottom: 4rem;
+}
+.cocktail-img{
+    width: 100%;
+}
+.logo{
+    width: 25%;
+    filter: drop-shadow(0 0 1rem white);
+}
+.lol{
+    width: 14rem;
+}
+@media (min-width: 576px) {
+    .container-loading-logo{
+        flex-direction: row;
+    }
+    .letter-margin{
+        margin-bottom: 0;
+    }
+    .cocktail-img{
+        width: 25%;
+    }
+}

@@ -1,0 +1,27 @@
+<div class="loading-page" *ngIf="loading">
+    <app-loading></app-loading>
+</div>
+<div *ngIf="modalChange">
+    <app-modal-info [cocktaildetaile]="itemCocktail" (close)="onClose($event)" ></app-modal-info>
+</div>
+
+<div [ngClass]="{'d-none': loading}" class="min-vh-100 vw-auto bg-home">
+    <div class="container">
+        <div class="header-cocktail mb-5 pt-5">
+            <section>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cocktail's name" aria-label="Cocktail's name" [(ngModel)]="lettersDrinks"  aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button" (click)="searchDrinks()">SEARCH</button>
+                    </div>
+                  </div>
+            </section>
+        </div>
+        <div class="cards-container container-cards pb-5">
+            <button type="button" (click)="modalOpen(item)" *ngFor="let item of drinks" class="card-container mx-4 my-4">
+                <app-card [cocktailDetaile]="item" ></app-card>
+            </button>
+        </div>
+    </div>
+    
+</div>
